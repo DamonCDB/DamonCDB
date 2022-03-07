@@ -1,5 +1,5 @@
 def rot(cadena, rotacion):
-    """ Esta función cifra con un ROT+3 el mensaje que le pasamos """
+    """ Esta función cifra con un ROT determinado por teclado el mensaje que le pasamos """
     # Pasamos todos los caracteres a minúsculas
     cadena = cadena.lower()
     # Eliminamos los espacios
@@ -13,7 +13,7 @@ def rot(cadena, rotacion):
         if letra in caracteres:
             # Obtenemos el índice de la letra en la tupla
             indice = caracteres.index(letra)
-            # Le sumamos al índice tres posiciones
+            # Le sumamos al índice las posiciones indicadas por rotacion
             nuevo_indice = indice + rotacion
             # Si el nuevo índice supera la lista de elementos de la tupla, volvemos al principio
             if nuevo_indice > 26:
